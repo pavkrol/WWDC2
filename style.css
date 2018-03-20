@@ -23,6 +23,11 @@ html {
 	font-family: 'Raleway', sans-serif;
 }
 
+a:active {
+	background-color: transparent;
+	border: none;
+}
+
 .logo {
 	font-family: 'Pacifico', cursive;
 	font-size: 50px;
@@ -73,9 +78,10 @@ html {
 	border-top: 3px solid transparent;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-in-out;
+	background-color: transparent !important;
 }
 
-#menu-button {
+.menu-button {
 	display: none;
 	float: right;
 	width: 50px;
@@ -546,10 +552,25 @@ html {
 		float: left;
 		background-color: #f9f8fb;
 	}
-	#menu-button {
+	.menu-button {
 		display: block;
 		float: right;
 		width: 20%;
+		position: absolute;
+		right: 5px;
+		top: 20px;
+	}
+
+	.navbar-wrapper {
+		background-color: #f9f8fb;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.navbar-wrapper__small {
+		background-color: #f9f8fb;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 
 	.main-title {
@@ -662,6 +683,10 @@ html {
 	.footer__company-name, .footer__author {
 		padding-top: 15px;
 		padding-bottom: 15px;
+	}
+
+	.contact__article, .blog__article, .gallery__article {
+		width: 75%;
 	}
 
 }

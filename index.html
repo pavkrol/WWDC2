@@ -16,7 +16,7 @@
   		<nav id="navigation-bar" class="navbar navbar-wrapper navbar-fixed-top" role="navigation">
   			<div class="container-fluid navbar__container">
 					<h1 class="logo">Cahee</h1>
-  					<div id="menu-button" class="glyphicon glyphicon-menu-hamburger"></div>
+  					<div id="menu-button" class="glyphicon glyphicon-menu-hamburger menu-button"></div>
   					<ul id="navbar-menu" class="nav navbar-nav navbar-right navbar-menu">
   						<li class="navbar__item"><a href="#home">HOME</a></li>
   						<li class="navbar__item"><a href="#about">ABOUT</a></li>
@@ -174,7 +174,7 @@
 			  $(window).scroll(function(){
 			     var top = $(window).scrollTop();
 			     var find_class_small = $.contains('#navigation-bar', '.navbar-wrapper__small');
-			     if(top > 150 && find_class_small == false) {
+			     if(top > 50 && find_class_small == false) {
 			      	$('#navigation-bar').addClass('navbar-wrapper__small');
 			     }   
 			     else {
@@ -189,7 +189,7 @@
 					var target = $( $(this).attr('href') );
 					if( target.length ) {
 						event.preventDefault();
-						$('html, body').animate({
+						$('html, body').stop().animate({
 						scrollTop: target.offset().top
 						}, 1000);
 					}
